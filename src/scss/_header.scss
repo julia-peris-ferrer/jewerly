@@ -1,0 +1,41 @@
+.header {
+    background-color: white;
+    padding: 7px;
+    & > .logo{
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.header-icons {
+    display: flex;
+    padding: 10px 15px;
+    align-items: center;
+    justify-content: flex-end;
+    
+    & > .form-search {
+        padding: 4px;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        margin-right: 5px;
+        & > i {
+            color: grey;
+            padding-right: 4px;
+        }
+        & > input{
+            border: none;
+            font-size: 16px;
+        }
+    }
+
+    & > i {
+        display: block;
+        padding-left: 4px;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        &:hover {
+            color: rgb(255, 255, 255);
+        }
+    }
+}

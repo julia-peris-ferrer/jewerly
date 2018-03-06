@@ -1,0 +1,148 @@
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px;
+    text-align: center;
+    max-width: 1270px;
+    margin: 30px auto;
+    
+    & > .item {
+        background-color: white;
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+        margin: 8px;
+
+        &:hover{
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+        }
+
+        & > .img {
+            position: relative;
+            width: 100%;
+            display: block;
+
+            & > img {
+                width: 100%;
+                transition: opacity 500ms ease-out 100ms;
+            }
+            & > .detail {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+            &:hover > .detail {
+                opacity: 1;
+            }
+            &:hover > .general {
+                opacity: 0;
+            }
+        }
+
+        & > .description{
+            padding: 15px;
+            position: relative;
+
+            & > .favorite {
+                position: absolute;
+                top: 0;
+                left: 0;
+                color: rgb(0, 0, 0);
+                font-size: 25px;
+                cursor: pointer;
+                padding: 17px;
+    
+                &:hover {
+                    color: rgb(184, 37, 37);
+                }
+            }
+            & > .view {
+                position: absolute;
+                top: 0;
+                right: 0;
+                color: rgb(0, 0, 0);
+                font-size: 25px;
+                cursor: pointer;
+                padding: 17px;
+    
+                &:hover {
+                    color: rgb(99, 160, 196);
+                }
+            }
+            & > h4 {
+                color: rgb(196, 185, 157);
+                font-family: 'Inconsolata', monospace;
+                text-transform: uppercase;
+                padding-top: 44px;
+                padding-bottom: 6px;
+                font-size: 16px;
+                letter-spacing: 1px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            & > p {
+                color: rgb(139, 139, 139);
+                font-family: 'Inconsolata', monospace;
+                font-size: 15px;
+                padding-top: 9px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            & > .old-price {
+                color: rgb(146, 69, 69);
+                font-style: italic;
+                text-decoration: line-through;
+                font-weight: bolder;
+                font-family: 'Inconsolata', monospace;
+                font-size: 15px;
+                padding-top: 8px;
+            }
+            & > .price {
+                color: black;
+                font-weight: bolder;
+                font-family: 'Inconsolata', monospace;
+                font-size: 17px;
+                padding-top: 8px;
+            }
+            & > .colors {
+                text-align: center;
+                padding-top: 10px;
+                & > span {
+                    display: inline-block;
+                    border-radius: 50%;
+                    width: 18px;
+                    height: 18px;
+                    margin: 0 2px;
+                    transition: opacity 200ms ease-out;
+                    &:hover{
+                        opacity: 0.4;
+                        box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.6);
+                    }
+                }
+                & > .gold {
+                    background-color: gold;
+                }
+                & > .silver {
+                    background-color: silver;
+                }
+            }
+        }
+    }
+    @include if-tablet {
+        & > .item {
+            width: calc(33% - 16px);
+        }
+    }
+    @include if-desktop {
+        & > .item {
+            width: 230px;
+        }
+    }
+}
+

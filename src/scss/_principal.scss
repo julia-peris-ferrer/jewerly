@@ -1,0 +1,72 @@
+.band {
+    & > .carousel {
+        margin-top: 30px;
+        position: relative;
+        height: 400px;
+        overflow: hidden;
+
+        & > img {
+            position: absolute;
+            visibility: hidden;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transition: transform 400ms ease-in-out;
+        }
+    }
+    & > form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px auto;
+        text-align: center;
+        flex-direction: column;
+        max-width: 350px;
+    
+        & > * {
+            width: 300px;
+            box-sizing: border-box;
+            margin: 5px;
+        }
+    
+        & > h2 {
+            font-size: 40px;
+            text-transform: uppercase;
+            color: #fffefe;
+            letter-spacing: 2px;
+        }
+        & input {
+            padding: 13px;
+            border: none;
+            font-size: 15px;
+        }
+        & > input[type="Suscribirse"] {
+            background-color: #2e2e2e;
+            color: white;
+            &:hover {
+                opacity: 0.4;
+                cursor: pointer;
+            }
+        }
+    
+        @include if-desktop {
+            flex-direction: row;
+            max-width: auto;
+            & > * {
+                width: auto;
+                margin: 0 5px;
+            }
+            & > h2 {
+                font-size: 20px;
+            }
+            & > input {
+                width: 300px;
+            }
+    
+            & > input[type="Suscribirse"] {
+                width: 100px;
+            }
+        }
+    }
+    
+}

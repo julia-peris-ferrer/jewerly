@@ -1,0 +1,52 @@
+.menu {
+    list-style-type: none; /*Quitar la decoracion que se pone por defecto en las listas (puntos)*/
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    padding-bottom: 10px;
+
+    & > li{
+        display: inline-block;
+        background-color: white ;
+        margin: 30px 6px;
+        margin-bottom: 0px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra para la caja */
+
+        & > a {
+            color: #bdb18d;
+            text-transform: uppercase; /* Texto en mayúsculas */
+            width: 110px;
+            padding: 8px;
+            text-align: center;
+            display: block;
+            font-family: 'Inconsolata', monospace;
+            transition: background-color 400ms ease-out; /* Para que haya una transicion de un color a otro */
+            letter-spacing: 1px;
+
+            & :visited {
+                color: #bdb18d;
+            }
+            &:focus { /* Cuando pulsas con el ratón */
+                background-color: rgba(189, 177, 141, 0.8);
+                color: white;
+            }
+            
+            &:hover { /* Cuando pasas por encima con el ratón */
+                background-color: rgba(189, 177, 141, 0.8);
+                color: white;
+            }
+            
+            &:active {
+                background-color: rgba(189, 177, 141, 0.8);
+                color: white;
+            }
+        }
+
+    }
+
+}
+
+
+
+
+
