@@ -13,9 +13,11 @@
         background-color: white;
         border-radius: 2px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-        padding: 40px;
         box-sizing: border-box;
         position: relative;
+        & > img{
+            display: block;
+        }
 
         & > .close {
             position: absolute;
